@@ -1,0 +1,1 @@
+[{"model": "bands.musician", "pk": 4, "fields": {"first_name": "Jimi", "last_name": "Hendrix", "birth": "1942-11-27"}}]

@@ -1,0 +1,10 @@
+<!-- RiffMates/templates/general.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: {{title}}
+{% endblock %}
+
+{% block content %}
+  {{content|safe}}
+{% endblock content %}

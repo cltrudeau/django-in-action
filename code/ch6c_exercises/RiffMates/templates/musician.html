@@ -1,0 +1,26 @@
+<!-- RiffMates/templates/musician.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Musician Details
+{% endblock %}
+
+{% block content %}
+  <h1>{{musician.first_name}} {{musician.last_name}}</h1>
+
+  {% if musician.controller %}
+    <a href="{% url 'edit_musician' musician.id %}">Edit</a>
+  {% endif %}
+
+  {% if musician.picture %}
+    <p>
+      <img src="{{musician.picture.url}}"/>
+    </p>
+  {% endif %}
+
+  {% if musician.description %}
+    <p> {{musician.description}} </p>
+  {% endif %}
+
+  <p> Was born {{musician.birth}}. </p>
+{% endblock content %}

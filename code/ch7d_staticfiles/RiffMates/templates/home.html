@@ -1,0 +1,19 @@
+<!-- RiffMates/templates/home.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <img src="{% static 'img/logo.png' %}" height="100">
+  <h1>Welcome to RiffMates!</h1>
+
+  <ul>
+    <li> <a href="{% url 'news' %}">News</a> </li>
+    <li> <a href="{% url 'musicians' %}">Musicians</a> </li>
+    <li> <a href="{% url 'bands' %}">Bands</a> </li>
+    <li> <a href="{% url 'venues' %}">Venues</a> </li>
+    <li> <a href="{% url 'list_ads' %}">Classified Ads</a> </li>
+    <li> <a href="{% url 'comment' %}">Leave a comment</a> </li>
+
+  </ul>
+
+{% endblock content %}
