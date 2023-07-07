@@ -1,8 +1,7 @@
 # RiffMates/content/admin.py
+from content.models import SeekingAd
 from django.contrib import admin
 from django.utils.text import Truncator
-
-from content.models import SeekingAd
 
 
 @admin.register(SeekingAd)

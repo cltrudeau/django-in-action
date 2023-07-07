@@ -1,12 +1,10 @@
 # RiffMates/bands/views.py
+from bands.forms import VenueForm
+from bands.models import Band, Musician, Room, Venue
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.paginator import Paginator
 from django.http import Http404
-from django.shortcuts import render, get_object_or_404, redirect
-
-from bands.models import Musician
-from bands.models import Band, Venue, Room
-from bands.forms import VenueForm
+from django.shortcuts import get_object_or_404, redirect, render
 
 
 def musician(request, musician_id):
@@ -17,7 +15,7 @@ def _get_items_per_page(request):
     # Determine how many items to show per page, disallowing <1 or >50
     items_per_page = int(request.GET.get("items_per_page", 10))
     if items_per_page < 1:
-        items_per_page = 1
+        items_per_page = 10
     if items_per_page > 50:
         items_per_page = 50
 

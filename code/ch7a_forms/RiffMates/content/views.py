@@ -1,8 +1,7 @@
 # RiffMates/content/views.py
-from django.core.mail import send_mail
-from django.shortcuts import render, redirect
-
 from content.forms import CommentForm
+from django.core.mail import send_mail
+from django.shortcuts import redirect, render
 
 
 def comment(request):

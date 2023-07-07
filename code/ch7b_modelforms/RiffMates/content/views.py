@@ -1,10 +1,9 @@
 # RiffMates/content/views.py
+from content.forms import CommentForm, SeekingAdForm
+from content.models import SeekingAd, SeekingChoice
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
-from django.shortcuts import render, redirect
-
-from content.forms import CommentForm, SeekingAdForm
-from content.models import SeekingChoice, SeekingAd
+from django.shortcuts import redirect, render
 
 
 def comment(request):

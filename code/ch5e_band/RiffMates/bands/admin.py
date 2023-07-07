@@ -1,10 +1,10 @@
 # RiffMates/bands/admin.py
-from datetime import datetime, date
-from django.contrib import admin
+from datetime import date, datetime
 
-from django.utils.html import format_html
+from bands.models import Band, Musician
+from django.contrib import admin
 from django.urls import reverse
-from bands.models import Musician, Band
+from django.utils.html import format_html
 
 
 class DecadeListFilter(admin.SimpleListFilter):

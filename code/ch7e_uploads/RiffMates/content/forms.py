@@ -1,6 +1,6 @@
 # RiffMates/content/forms.py
-from django import forms
 from content.models import SeekingAd
+from django import forms
 
 
 class CommentForm(forms.Form):

@@ -1,7 +1,7 @@
 # RiffMates/home/views.py
 from datetime import date, timedelta
-from django.http import HttpResponse
-from django.http import JsonResponse
+
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 

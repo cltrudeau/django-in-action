@@ -1,9 +1,8 @@
 # RiffMates/content/models.py
+from bands.models import Band, Musician
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
-
-from bands.models import Musician, Band
 
 
 class SeekingChoice(models.TextChoices):

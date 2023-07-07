@@ -1,7 +1,6 @@
 # RiffMates/content/urls.py
-from django.urls import path
-
 from content import views
+from django.urls import path
 
 urlpatterns = [
     path("comment/", views.comment, name="comment"),

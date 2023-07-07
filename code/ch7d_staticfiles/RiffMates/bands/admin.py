@@ -1,14 +1,12 @@
 # RiffMates/bands/admin.py
-from datetime import datetime, date
+from datetime import date, datetime
+
+from bands.models import Band, Musician, Room, UserProfile, Venue
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
-
-from django.utils.html import format_html
 from django.urls import reverse
-from django.utils.html import mark_safe
-
-from bands.models import Musician, Band, Venue, Room, UserProfile
+from django.utils.html import format_html, mark_safe
 
 
 class DecadeListFilter(admin.SimpleListFilter):

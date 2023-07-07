@@ -1,6 +1,5 @@
 # RiffMates/home/views.py
-from django.http import HttpResponse
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 
 
 def credits(request):

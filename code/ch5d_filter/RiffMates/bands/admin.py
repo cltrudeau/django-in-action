@@ -1,11 +1,8 @@
 # RiffMates/bands/admin.py
-from datetime import datetime, date
+from datetime import date, datetime
+
+from bands.models import Band, Musician
 from django.contrib import admin
-
-from bands.models import Musician
-
-
-from bands.models import Musician, Band
 
 
 class DecadeListFilter(admin.SimpleListFilter):
