@@ -1,4 +1,5 @@
-# Django In Action
+![Django In Action][cover]
+
 ## Sample Code and Exercise Solutions
 
 This is the source code repository that goes along with the _Django In Action_
@@ -15,7 +16,10 @@ examples on template basics and template inheritance, and the third contains
 the answers to the exercises at the end of the chapter.
 
 _Django In Action_ is currently being written and is available through
-Manning's Early Access Program [MEAP](https://www.manning.com/meap-program).
+Manning's Early Access Program. If you have a copy already, thanks for picking
+it up. If you don't, you can get it here:
+
+http://mng.bz/gBqE
 
 If you find errors in the code, feel free to open an issue. If you're
 participating in the MEAP program, notes and feedback on the book should be
