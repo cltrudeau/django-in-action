@@ -1,4 +1,4 @@
-![Django In Action][cover]
+![Image](cover.png)
 
 ## Sample Code and Exercise Solutions
 
