@@ -1,0 +1,42 @@
+<!-- RiffMates/templates/list_ad.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'seeking_ad' %}">New Ad</a>
+  {% endif %}
+
+  <h1>Musicians Seeking Bands </h1>
+
+  {% for ad in seeking_band %}
+    <p>
+      {{ad.date}} &mdash;
+      {{ad.musician.first_name}} {{ad.musician.last_name}}
+      {% if ad.owner == request.user %}
+        <a href="{% url 'edit_seeking_ad' ad.id %}">Edit</a>
+      {% endif %}
+
+      <br/>
+      <i>{{ad.content}}</i>
+    </p>
+  {% empty %}
+    <p> <i>No ads at this time</i> </p>
+  {% endfor %}
+
+  <h1>Bands Seeking Musicians </h1>
+
+  {% for ad in seeking_musician %}
+    <p>
+      {{ad.date}} &mdash; {{ad.band.name}}
+      {% if ad.owner == request.user %}
+        <a href="{% url 'edit_seeking_ad' ad.id %}">Edit</a>
+      {% endif %}
+
+      <br/>
+      <i>{{ad.content}}</i>
+    </p>
+  {% empty %}
+    <p> <i>No ads at this time</i> </p>
+  {% endfor %}
+
+{% endblock content %}

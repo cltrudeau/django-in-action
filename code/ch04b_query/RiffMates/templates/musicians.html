@@ -1,0 +1,21 @@
+<!-- RiffMates/templates/musicians.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Musician Listing
+{% endblock %}
+
+{% block content %}
+  <h1>Musicians</h1>
+
+  <ul>
+    {% for musician in musicians %}
+      <li> <a href="{% url 'musician' musician.id %}">
+        {{musician.last_name}}, {{musician.first_name}}
+      </a> </li>
+    {% empty %}
+      <li> <i>No musicians in the database</i> </li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}

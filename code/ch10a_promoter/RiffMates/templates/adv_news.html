@@ -1,0 +1,20 @@
+<!-- RiffMates/templates/adv_news.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: News
+{% endblock %}
+
+{% block content %}
+  <h1>RiffMates Advanced News</h1>
+
+  <table>
+    {% for item in news %}
+      <tr style="background-color: {% cycle '#ddd' '#bbb' %}">
+        <td> {{ item.0 | date:"Y-m-d" }} </td>
+        <td> {{ item.1 }} </td>
+      </tr>
+    {% endfor %}
+  </table>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Login</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button class="btn btn-dark" type="submit">Login</button>
+</form>
+
+<br/>
+<p>
+  <a href="{% url 'password_reset' %}">Lost password?</a>
+</p>
+
+{% endblock content %}
