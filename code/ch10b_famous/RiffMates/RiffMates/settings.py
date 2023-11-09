@@ -140,6 +140,3 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # Upload files
 MEDIA_ROOT = BASE_DIR.parent / "outside/RiffMates/uploads"
 MEDIA_URL = "/media/"
-
-
-print("I am", BASE_DIR)

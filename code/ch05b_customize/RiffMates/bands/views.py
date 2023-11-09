@@ -1,5 +1,5 @@
 # RiffMates/bands/views.py
-from bands.models import Band, Musician, Room, Venue
+from bands.models import Band, Musician, Venue
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
 

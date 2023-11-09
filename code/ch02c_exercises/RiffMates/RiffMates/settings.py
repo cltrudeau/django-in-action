@@ -57,6 +57,7 @@ ROOT_URLCONF = "RiffMates.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "builtins": ["django.templatetags.static"],
@@ -124,6 +125,3 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-print("I am", BASE_DIR)

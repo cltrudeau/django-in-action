@@ -27,7 +27,7 @@ def about(request):
     ]
 
     content = "\n".join(content)
-    return HttpResponse(content)
+    return HttpResponse(content, content_type="text/html")
 
 
 def version(request):
