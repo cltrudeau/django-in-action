@@ -1,0 +1,35 @@
+<!-- RiffMates/templates/base.html -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <title>
+    {% block title %}RiffMates{% endblock %}
+  </title>
+  <script src="{% static 'js/htmx-1.9.8.min.js' %}"></script>
+
+</head>
+<body>
+  {% block nav %}
+  <div style="float: right;">
+    <a href="{% url 'home' %}">Home</a> &nbsp;&nbsp;
+
+    {% if user.is_authenticated %}
+      Hello, {{user.username}}! &nbsp;
+
+      <form id="logout-form" method="post" action="{% url 'logout' %}"
+          style="display: inline;">
+        {% csrf_token %}
+        <button type="submit"
+          style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: underline;"
+          >Logout</button>
+      </form>
+    {% else %}
+      <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+  </div>
+  {% endblock nav %}
+  {% block content %}
+  {% endblock content %}
+</body>
+</html>

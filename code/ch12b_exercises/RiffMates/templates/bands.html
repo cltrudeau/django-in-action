@@ -1,0 +1,28 @@
+<!-- RiffMates/templates/bands.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Band Listing
+{% endblock %}
+
+{% block content %}
+  <h1>Bands</h1>
+
+  <ul>
+    {% for band in bands %}
+      <li> <a href="{% url 'band' band.id %}"> {{band.name}} </a> </li>
+    {% empty %}
+      <li> <i>No bands in the database</i> </li>
+    {% endfor %}
+  </ul>
+
+  {% if page.has_other_pages %}
+    {% if page.has_previous %}
+      <a href="{% url 'bands' %}?page={{page.previous_page_number}}"> Prev</a>
+      &nbsp;&nbsp;&nbsp;
+    {% endif %}
+    {% if page.has_next %}
+      <a href="{% url 'bands' %}?page={{page.next_page_number}}"> Next</a>
+    {% endif %}
+  {% endif %}
+{% endblock content %}

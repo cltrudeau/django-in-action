@@ -1,0 +1,15 @@
+<!-- RiffMates/templates/promoters.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Promoter Listing
+{% endblock %}
+
+{% block content %}
+  <h1>Promoters</h1>
+
+  <div hx-get="/promoters/partial_promoters/" hx-trigger="load">
+    <i> Loading promoters... </i>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+<!-- RiffMates/templates/comment.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Comment</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button class="btn btn-dark" type="submit">Send</button>
+</form>
+
+{% endblock content %}

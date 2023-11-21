@@ -1,0 +1,14 @@
+<!-- RiffMates/templates/partials/edit_room_form.html -->
+<li id="room-row-{{room.id}}">
+    <form>
+      {% csrf_token %}
+      {{form.as_p}}
+      <button hx-post="{% url 'edit_room_form' room.id %}"
+        hx-target="#room-row-{{room.id}}"
+        >Save</button>
+      <button
+          hx-get="{% url 'show_room_partial' room.id %}"
+          hx-target="#room-row-{{room.id}}"
+        >Cancel</button>
+    </form>
+</li>

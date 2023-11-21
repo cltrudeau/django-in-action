@@ -1,0 +1,19 @@
+<!-- RiffMates/templates/partials/musician_results.html -->
+<ul>
+  {% for musician in musicians %}
+    <li> <a href="{% url 'musician' musician.id %}">
+      {{musician.last_name}}, {{musician.first_name}}
+    </a> </li>
+  {% empty %}
+    <li> <i>No matching musicians</i> </li>
+  {% endfor %}
+</ul>
+
+{% if has_more %}
+  <div
+    hx-get="{% url 'search_musicians' %}?page={{next_page}}&search_text={{search_text}}"
+    hx-trigger="revealed"
+    hx-swap="outerHTML">
+    <i> Loading more results ... </i>
+  </div>
+{% endif %}

@@ -1,4 +1,5 @@
 <!-- RiffMates/templates/base.html -->
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +8,21 @@
   </title>
 </head>
 <body>
+  <div style="float: right;">
+    {% if user.is_authenticated %}
+      Hello, {{user.username}}! &nbsp;
+
+      <form id="logout-form" method="post" action="{% url 'logout' %}"
+          style="display: inline;">
+        {% csrf_token %}
+        <button type="submit"
+          style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: underline;"
+          >Logout</button>
+      </form>
+    {% else %}
+      <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+  </div>
   {% block content %}
   {% endblock content %}
 </body>

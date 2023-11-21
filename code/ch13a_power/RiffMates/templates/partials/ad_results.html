@@ -1,0 +1,29 @@
+<!-- RiffMates/templates/partials/ad_results.html -->
+{% for ad in ads %}
+  <p>
+    {{ad.date}} &mdash;
+    {{ad.musician.first_name}} {{ad.musician.last_name}}
+
+    <br/>
+    {% if ad.seeking == "M" %}
+      Band, "{{ad.band.name}}", is seeking a musician
+    {% else %}
+      Musician, "{{ad.musician.first_name}} {{ad.musician.last_name}}"
+      is seeking a band
+    {% endif %}
+    <br/>
+    <i>{{ad.content}}</i>
+  </p>
+  <hr>
+{% empty %}
+  <p> <i>No ads at this time</i> </p>
+{% endfor %}
+
+{% if has_more %}
+  <div
+    hx-get="{% url 'search_ads' %}?page={{next_page}}&search_text={{search_text}}"
+    hx-trigger="revealed"
+    hx-swap="outerHTML">
+    <i> Loading more results ... </i>
+  </div>
+{% endif %}

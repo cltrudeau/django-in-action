@@ -1,0 +1,23 @@
+<!-- RiffMates/templates/search_ads.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Search Ads
+{% endblock %}
+
+{% block content %}
+  <h1>Search Ads</h1>
+
+  <input name="search_text"
+    placeholder="Search the ads..."
+    type="text"
+    value="{{search_text}}"
+    hx-get="{% url 'search_ads' %}"
+    hx-trigger="keyup changed delay:500ms"
+    hx-target="#results"
+    hx-push-url="true">
+
+    <div class="results" id="results">
+      {% include "partials/ad_results.html" %}
+    </div>
+{% endblock content %}

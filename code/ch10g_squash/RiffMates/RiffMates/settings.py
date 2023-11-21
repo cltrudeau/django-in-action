@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "home",
     "bands",
     "content",
-    "promoter",
+    "promoters",
 ]
 
 MIDDLEWARE = [

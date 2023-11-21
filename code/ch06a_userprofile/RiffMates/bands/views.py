@@ -128,8 +128,6 @@ def musician_restricted(request, musician_id):
 
     content = f"""
         <h1>Musician Page: {musician.last_name}</h1>
-
-        <p> <a href="/accounts/logout/">Logout</a> </p>
     """
     data = {
         "title": "Musician Restricted",

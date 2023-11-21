@@ -1,0 +1,19 @@
+<!-- RiffMates/templates/room_editor.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Venue Room Editor
+{% endblock %}
+
+{% block content %}
+  <h1>Venue: {{venue.name}}</h1>
+
+  <ul>
+    {% for room in venue.room_set.all %}
+      {% include "partials/show_room.html" %}
+    {% empty %}
+      <li><i>No rooms for this venue</i> </li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}

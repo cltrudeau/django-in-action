@@ -1,0 +1,27 @@
+<!-- RiffMates/templates/tabbed_listing.html -->
+{% extends "base.html" %}
+
+{% block title %}
+  {{block.super}}: Tabbed Listing
+{% endblock %}
+{% block nav %}
+{# empty block to ensure you don't get the nav twice #}
+{% endblock %}
+
+{% block content %}
+  <div>
+    <a hx-get="/bands/musicians/" hx-target="#tab-block" hx-swap="innerHTML"
+      style="cursor: pointer; text-decoration: underline;"
+      >Musicians</a>
+    &nbsp; &nbsp;
+    <a hx-get="/bands/venues/" hx-target="#tab-block" hx-swap="innerHTML"
+      style="cursor: pointer; text-decoration: underline;"
+      >Venues</a>
+
+  </div>
+
+  <div id="tab-block">
+    <div hx-get="/bands/musicians/" hx-trigger="load" hx-swap="outerHTML"/>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,8 @@
+<!-- RiffMates/templates/partials/show_room.html -->
+<li id="room-row-{{room.id}}">
+  {{room.name }} &nbsp;&nbsp;
+  <a hx-get="{% url 'edit_room_form' room.id %}"
+      hx-target="#room-row-{{room.id}}"
+      style="cursor: pointer; text-decoration: underline"
+    > (Edit) </a>
+</li>
