@@ -16,9 +16,9 @@ router = Router()
 
 
 class RoomSchema(ModelSchema):
-    class Config:
+    class Meta:
         model = Room
-        model_fields = ["id", "name"]
+        fields = ["id", "name"]
 
 
 class VenueOut(ModelSchema):
@@ -26,9 +26,9 @@ class VenueOut(ModelSchema):
     url: str
     rooms: list[RoomSchema] = Field(..., alias="room_set")
 
-    class Config:
+    class Meta:
         model = Venue
-        model_fields = ["id", "name", "description"]
+        fields = ["id", "name", "description"]
 
     @staticmethod
     def resolve_slug(obj):
@@ -47,19 +47,19 @@ class VenueOut(ModelSchema):
 
 
 class VenueIn(ModelSchema):
-    class Config:
+    class Meta:
         model = Venue
-        model_fields = ["name", "description"]
+        fields = ["name", "description"]
 
 
 class VenueFilter(FilterSchema):
-    name: Optional[str] = Field(q=["name__istartswith"])
+    name: Optional[str] = Field(None, q=["name__istartswith"])
 
 
 class MusicianIn(ModelSchema):
-    class Config:
+    class Meta:
         model = Musician
-        model_fields = [
+        fields = [
             "first_name",
             "last_name",
             "birth",
@@ -68,9 +68,9 @@ class MusicianIn(ModelSchema):
 
 
 class MusicianOut(ModelSchema):
-    class Config:
+    class Meta:
         model = Musician
-        model_fields = [
+        fields = [
             "id",
             "first_name",
             "last_name",
@@ -82,9 +82,9 @@ class MusicianOut(ModelSchema):
 class BandSchema(ModelSchema):
     musicians: list[MusicianOut]
 
-    class Config:
+    class Meta:
         model = Band
-        model_fields = ["id", "name"]
+        fields = ["id", "name"]
 
 
 # ---------------------------------------------------------------------------

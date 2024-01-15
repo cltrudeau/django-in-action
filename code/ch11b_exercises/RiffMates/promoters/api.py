@@ -7,9 +7,9 @@ router = Router()
 
 
 class PromoterSchema(ModelSchema):
-    class Config:
+    class Meta:
         model = Promoter
-        model_fields = ["id", "full_name", "birth", "death"]
+        fields = ["id", "full_name", "birth", "death"]
 
 
 @router.get("/promoters/", response=list[PromoterSchema])

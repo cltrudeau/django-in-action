@@ -1,4 +1,4 @@
-Django==5.0
-django-ninja==0.22.2
+Django==5.0.1
+django-ninja==1.1.0
 django-htmx==1.17.0
 Pillow==9.5.0
