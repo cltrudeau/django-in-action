@@ -1,4 +1,8 @@
-Django==5.0.1
+Django==5.0.2
+django-awl==1.8.2
+django-debug-toolbar==4.3.0
+django-extensions==3.2.3
+django-grappelli==3.0.8
 django-ninja==1.1.0
 django-htmx==1.17.0
 Pillow==9.5.0
