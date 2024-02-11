@@ -17,7 +17,7 @@ def re_westernize_names(apps, schema_editor):
     for promoter in Promoter.objects.all():
         promoter.first_name = promoter.common_name
         length = len(promoter.first_name)
-        promoter.last_name = promoter.full_name[length:]
+        promoter.last_name = promoter.full_name[length + 1 :]
 
     promoter.save()
 
