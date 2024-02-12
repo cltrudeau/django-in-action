@@ -11,7 +11,7 @@ class MusicianBandChoice(models.TextChoices):
 
 
 class SeekingAd(models.Model):
-    date = models.DateField(auto_now=True)
+    date = models.DateField(auto_now_add=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     seeking = models.CharField(max_length=1, choices=MusicianBandChoice.choices)
     musician = models.ForeignKey(

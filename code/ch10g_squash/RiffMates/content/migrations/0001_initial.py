@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("date", models.DateField(auto_now=True)),
+                ("date", models.DateField(auto_now_add=True)),
                 (
                     "seeking",
                     models.CharField(
