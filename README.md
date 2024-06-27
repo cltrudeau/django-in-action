@@ -20,7 +20,7 @@ solutions to the exercises. Due to space constraints, printed copies do not
 include Appendix E, a PDF version is included in this repository for your
 reference.
 
-[_Django In Action](http://mng.bz/gBqE) is available through the publisher as
+[_Django In Action_](http://mng.bz/gBqE) is available through the publisher as
 well as at your favourite book stores.
 
 If you find errors in the code, feel free to open an issue. For those who
