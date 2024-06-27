@@ -20,12 +20,9 @@ solutions to the exercises. Due to space constraints, printed copies do not
 include Appendix E, a PDF version is included in this repository for your
 reference.
 
-_Django In Action_ is currently being written and is available through
-Manning's Early Access Program. If you have a copy already, thanks for picking
-it up. If you don't, you can get it here:
+[_Django In Action](http://mng.bz/gBqE) is available through the publisher as
+well as at your favourite book stores.
 
-http://mng.bz/gBqE
-
-If you find errors in the code, feel free to open an issue. If you're
-participating in the MEAP program, notes and feedback on the book should be
-through the liveBook forum.
+If you find errors in the code, feel free to open an issue. For those who
+participated in the early access program and internal review process, thanks
+so much for your feedback, it made a big difference.
