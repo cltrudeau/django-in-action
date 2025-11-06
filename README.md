@@ -87,3 +87,7 @@ so much for your feedback, it made a big difference.
     * 12b_exercises -- Chapter 12.6, p299
 * Chapter 13
     * 13a_power -- Chapter 13.1, p302
+
+## Eratta 
+
+* on p144, listing 6.8 contains a comment saying the code is for "views.py" when it should be "RiffMates/bands/models.py"
